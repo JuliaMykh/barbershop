@@ -1,0 +1,206 @@
+/* главный белый цвет #FFFFFF
+красный цвет #FF6C00;
+черный заголовков,  к нам #303030;
+главный шрифт абзацев #555555;
+цвет в ценах, герое #9DA4BD;
+абзац в ценах, герой rgba(157, 164, 189, 0.6);
+
+фон белый #FFFFFF
+фон серый #F7F7F7;
+фон черный #191C26
+
+*/
+:root {
+  --white-color: #ffffff;
+  --accent-color: #ff6c00;
+  --black-color: #303030;
+  --grey-color: #555555;
+  --prices-color: #9da4bd;
+  --secondary-p-color: rgba(157, 164, 189, 0.6);
+
+  --grey-background: #f7f7f7;
+  --black-background: #191c26;
+
+  --primary-font-family: Open Sans, sans-serif;
+  --secondary-font-family: Raleway, sans-serif;
+}
+body {
+  font-family: var(--primary-font-family);
+}
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+  font-style: normal;
+}
+/* Компоненты */
+.overtitle {
+  color: var(--black-color);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.slogan {
+  color: var(--grey-color);
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+.title {
+  color: var(--black-color);
+  font-family: var(--secondary-font-family);
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.04;
+  letter-spacing: 0.05em;
+}
+.button {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+/* Хедер */
+.header {
+  background-color: teal;
+}
+.nav-link {
+  color: var(--white-color);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+}
+.main-tel {
+  color: var(--white-color);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.main-tel:hover,
+.main-tel:focus,
+.hero-net:hover,
+.hero-net:focus,
+.button:hover,
+.button:focus {
+  color: var(--accent-color);
+}
+/* Герой */
+.hero-net {
+  color: var(--black-color);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+}
+.hero-title {
+  font-family: var(--secondary-font-family);
+  color: black;
+  /* color: var(--white-color); */
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+}
+.hero .overtitle {
+  color: var(--secondary-p-color);
+}
+.hero .slogan {
+  color: var(--prices-color);
+}
+/* Секция о нас */
+.about .overtitle {
+}
+.about .title {
+}
+.about .slogan {
+}
+/* Цены и услуги */
+.price-list .overtitle {
+  color: var(--secondary-p-color);
+}
+.price-list .title {
+  /* color: var(--white-color); */
+}
+.services,
+.our-prices {
+  color: var(--prices-color);
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+.price-list .button {
+  color: var(--white-color);
+}
+/* Почему к нам приходят */
+.title-hidden {
+  display: none;
+}
+.numbers {
+  color: var(--black-color);
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  letter-spacing: 0.05em;
+}
+.success-text {
+  color: var(--black-color);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+}
+/* Наши мастера */
+.our-barbers {
+  background-color: var(--grey-background);
+}
+.name {
+  color: var(--black-color);
+  font-size: 18px;
+  line-height: 1.39;
+  letter-spacing: 0.02em;
+}
+.prof {
+  color: var(--accent-color);
+  font-size: 14px;
+  line-height: 1.36;
+  letter-spacing: 0.02em;
+}
+/* фотогалерея */
+.hidden-title {
+  display: none;
+}
+/*  Запись,контакты, время работы */
+.mode-contacts {
+  background-color: var(--black-background);
+}
+.mode-contacts .title {
+  color: var(--white-color);
+}
+.mail {
+  font-style: normal;
+}
+.link-contacts .title {
+  /* color: var(--white-color); */
+  font-style: normal;
+}
+/* Футер */
+.copyright,
+.footer-net {
+  color: var(--black-color);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+}
+.copyright {
+  color: var(--prices-color);
+}
