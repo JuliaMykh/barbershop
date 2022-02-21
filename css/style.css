@@ -1,15 +1,3 @@
-/* главный белый цвет #FFFFFF
-красный цвет #FF6C00;
-черный заголовков,  к нам #303030;
-главный шрифт абзацев #555555;
-цвет в ценах, герое #9DA4BD;
-абзац в ценах, герой rgba(157, 164, 189, 0.6);
-
-фон белый #FFFFFF
-фон серый #F7F7F7;
-фон черный #191C26
-
-*/
 :root {
   --white-color: #ffffff;
   --accent-color: #ff6c00;
@@ -27,14 +15,35 @@
 body {
   font-family: var(--primary-font-family);
 }
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul,
+li {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
+}
+address {
+  font-style: normal;
+}
 .list {
   list-style: none;
 }
 .link {
   text-decoration: none;
-  font-style: normal;
 }
-/* Компоненты */
+
+/*===== Компоненты =====*/
 .overtitle {
   color: var(--black-color);
   font-weight: 600;
@@ -42,6 +51,7 @@ body {
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 .slogan {
   color: var(--grey-color);
@@ -56,18 +66,44 @@ body {
   font-size: 42px;
   line-height: 1.04;
   letter-spacing: 0.05em;
+  margin-bottom: 20px;
 }
 .button {
+  display: inline-block;
+  min-width: 160px;
+  padding: 12px 16px;
+
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  background-color: transparent;
+  cursor: pointer;
 }
-/* Хедер */
+.container {
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+/*===== Хедер ====== */
 .header {
   background-color: teal;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.logo-link {
+  margin-right: 70px;
 }
 .nav-link {
   color: var(--white-color);
@@ -94,7 +130,27 @@ body {
 .button:focus {
   color: var(--accent-color);
 }
-/* Герой */
+.button:hover,
+.button:focus {
+  color: var(--white-color);
+  background-color: var(--accent-color);
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
+}
+.nav-list .item:not(:last-child) {
+  margin-right: 40px;
+}
+.main-tel {
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+/*====== Герой =====*/
 .hero-net {
   color: var(--black-color);
   font-weight: 600;
@@ -110,6 +166,7 @@ body {
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
+  margin-bottom: 20px;
 }
 .hero .overtitle {
   color: var(--secondary-p-color);
@@ -117,19 +174,38 @@ body {
 .hero .slogan {
   color: var(--prices-color);
 }
-/* Секция о нас */
-.about .overtitle {
+/*===== Секция о нас =====*/
+.about-description {
+  color: var(--grey-color);
+  font-size: 14px;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+  margin-bottom: 40px;
 }
-.about .title {
+.main-container-about-us {
+  display: flex;
 }
-.about .slogan {
+
+.list-about-us {
+  display: flex;
 }
-/* Цены и услуги */
+.list-about-us .item:not(:last-child) {
+  margin-right: 30px;
+}
+.slogan-about {
+  margin-bottom: 20px;
+}
+.container-description-about {
+  padding-left: 64px;
+}
+
+/*===== Цены и услуги ======*/
 .price-list .overtitle {
   color: var(--secondary-p-color);
 }
-.price-list .title {
+.title-prices {
   /* color: var(--white-color); */
+  margin-bottom: 44px;
 }
 .services,
 .our-prices {
@@ -141,7 +217,31 @@ body {
 .price-list .button {
   color: var(--white-color);
 }
-/* Почему к нам приходят */
+.container-our-prices {
+  display: flex;
+  margin-bottom: 50px;
+}
+.prices-first,
+.prices-second {
+  width: 585px;
+  padding: 30px 40px;
+}
+
+.service-price {
+  display: flex;
+  justify-content: space-between;
+}
+.list-prices-first .item:not(:last-child),
+.list-prices-second .item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.button-prices {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*====== Почему к нам приходят =======*/
 .title-hidden {
   display: none;
 }
@@ -151,6 +251,7 @@ body {
   font-size: 42px;
   line-height: 1.36;
   letter-spacing: 0.05em;
+  margin-bottom: 6px;
 }
 .success-text {
   color: var(--black-color);
@@ -158,15 +259,68 @@ body {
   font-size: 11px;
   line-height: 1.36;
 }
-/* Наши мастера */
+.main-container-sucsess {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  justify-content: space-between;
+}
+.our-successes {
+  display: flex;
+  flex-wrap: nowrap;
+  /* justify-content: center; */
+
+  width: 655px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-left: 155px;
+}
+.sucsess-information {
+  background-color: var(--grey-background);
+  width: 170px;
+  padding: 20px 24px;
+  text-align: center;
+}
+.list-sucsess {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-sucsess .item:not(:nth-child(2n)) {
+  margin-right: 30px;
+}
+.list-sucsess .item:not(:nth-last-child(-n + 2)) {
+  margin-bottom: 30px;
+}
+/* .list-sucsess .item:nth-child(2) {
+  margin-top: 156px;
+} */
+
+.container-success-description {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.slogan-content {
+  width: 500px;
+}
+
+/*====== Наши мастера =======*/
 .our-barbers {
   background-color: var(--grey-background);
+}
+.our-barbers .title {
+  margin-bottom: 44px;
 }
 .name {
   color: var(--black-color);
   font-size: 18px;
   line-height: 1.39;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 .prof {
   color: var(--accent-color);
@@ -174,11 +328,39 @@ body {
   line-height: 1.36;
   letter-spacing: 0.02em;
 }
-/* фотогалерея */
-.hidden-title {
-  display: none;
+.empoyers {
+  display: flex;
 }
-/*  Запись,контакты, время работы */
+.empoyers .item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+.empoyers .item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+.employers-content {
+  padding-top: 30px;
+  text-align: center;
+}
+/*====== фотогалерея =======*/
+.hidden-title {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.gallery {
+  margin-bottom: 44px;
+}
+.list-gallery {
+  display: flex;
+}
+.list-gallery .item:not(:nth-child(4n)) {
+  margin-right: 30px;
+}
+
+/*======  Запись,контакты, время работы =======*/
 .mode-contacts {
   background-color: var(--black-background);
 }
@@ -192,7 +374,10 @@ body {
   /* color: var(--white-color); */
   font-style: normal;
 }
-/* Футер */
+/*======= Футер =======*/
+.footer {
+  background-color: var(--grey-background);
+}
 .copyright,
 .footer-net {
   color: var(--black-color);
@@ -203,4 +388,24 @@ body {
 }
 .copyright {
   color: var(--prices-color);
+  margin-left: 55px;
+}
+.footer-network {
+  display: flex;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  align-items: center;
+}
+.net-list {
+  display: block;
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+.net-list .item:not(:last-child) {
+  margin-right: 40px;
+}
+.footer-net {
+  padding-top: 55px;
+  padding-bottom: 55px;
 }
